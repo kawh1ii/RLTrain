@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "project": "RLTrain",
+  "milestone": "RLTrain-final",
+  "timestamp": "2026-08-27T16:37:25.290499+08:00",
+  "scope": "public-release-evidence",
+  "note": "This public manifest covers the cleaned GitHub evidence files. Raw logs, traces, checkpoints and private AutoDL artifacts are intentionally not published.",
+  "evidence_file_count": 5,
+  "files": [
+    {
+      "path": "results/final-benchmark.json",
+      "size_bytes": 2423,
+      "sha256": "364720589a7947878af7b3a92e5b1e659399419ff19b0e58a26cb894b094c9ca"
+    },
+    {
+      "path": "results/mechanism-trace.json",
+      "size_bytes": 1466,
+      "sha256": "17f74e0436b5cbc6a0c76983b1ce2de471b40279fcf9c78b6bc22fc2428a3e0f"
+    },
+    {
+      "path": "docs/system-architecture-study.md",
+      "size_bytes": 2737,
+      "sha256": "32520e1fbc4edf75dc6edcc673448bc38ca9c748ed98f8a17788b21768822346"
+    },
+    {
+      "path": "docs/benchmark-methodology.md",
+      "size_bytes": 1447,
+      "sha256": "84ef4087d3e09df327763ab4151c6faee44fd07dc1cb1bc15726f7a80acc9078"
+    },
+    {
+      "path": "docs/disaggregated-vs-colocated-benchmark.md",
+      "size_bytes": 1804,
+      "sha256": "4439e8c0955a41ed069aea8ac167b05570bc1509c1ba5067b747e8b43ce65687"
+    }
+  ]
+}
