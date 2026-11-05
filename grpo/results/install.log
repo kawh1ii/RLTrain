@@ -1,0 +1,17 @@
+Looking in indexes: http://mirrors.aliyun.com/pypi/simple
+Obtaining file:///root/autodl-tmp/rltrain-v2
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: rltrain-loss
+  Building editable for rltrain-loss (pyproject.toml): started
+  Building editable for rltrain-loss (pyproject.toml): finished with status 'done'
+  Created wheel for rltrain-loss: filename=rltrain_loss-0.1.0-0.editable-py3-none-any.whl size=1344 sha256=2a08b9b18282781fea84659291d21f054f386787a3b9953a1e1a1273786d12a7
+  Stored in directory: /tmp/pip-ephem-wheel-cache-z_81fk7y/wheels/d9/b1/5a/34e37f72e5d3bb9696d25c4cade4d0468944bf8785c75a4dec
+Successfully built rltrain-loss
+Installing collected packages: rltrain-loss
+Successfully installed rltrain-loss-0.1.0
+
+[notice] A new release of pip is available: 24.0 -> 26.3
+[notice] To update, run: /root/autodl-tmp/turbollm-v2/.venv/bin/python -m pip install --upgrade pip

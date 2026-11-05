@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "project": "RLTrain",
+  "milestone": "RLTrain-final",
+  "timestamp": "2026-08-27T14:25:26.669581+08:00",
+  "hardware_scope": {
+    "physical_gpu_count": 8,
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "workload_scope": {
+    "model": "Qwen2.5-0.5B-Instruct",
+    "algorithm": "GRPO",
+    "train_batch_size": 8,
+    "rollout_n": 3,
+    "ppo_mini_batch_size": 8,
+    "effective_actor_mini_batch": 24,
+    "matched_configuration": true,
+    "exact_realized_token_match": false
+  },
+  "architectures": {
+    "disaggregated": {
+      "placement": "6TRAIN_2ROLLOUT",
+      "execution": "one_step_off_policy",
+      "hybrid_engine": false,
+      "weight_transfer": "shared_memory",
+      "rollout_tp": 2
+    },
+    "colocated": {
+      "placement": "8GPU_SHARED_POOL",
+      "execution": "main_ppo_sync",
+      "hybrid_engine": true,
+      "weight_transfer": "TransferQueue",
+      "rollout_tp": 2
+    }
+  },
+  "formal_benchmark": {
+    "benchmark_result_confirmed": true,
+    "disagg_median_system_throughput_tokens_per_s": 453.7896579950549,
+    "colocated_median_system_throughput_tokens_per_s": 213.43237629643832,
+    "disagg_over_colocated_throughput_ratio": 2.126151926288737,
+    "disagg_throughput_advantage_fraction": 1.126151926288737,
+    "disagg_mean_realized_tokens": 11545.0,
+    "colocated_mean_realized_tokens": 8808.0,
+    "disagg_realized_token_difference_fraction": 0.3107402361489555,
+    "descriptive_disagg_median_step_time_s": 5.060302247852087,
+    "descriptive_colocated_median_step_time_s": 7.995051457360387,
+    "descriptive_disagg_step_time_reduction_fraction": 0.3670707093206407,
+    "primary_metric": "SYSTEM_TOKENS_PER_SECOND"
+  },
+  "mechanism_trace": {
+    "mechanism_evidence_complete": true,
+    "disaggregated": {
+      "measured_trace_step_s": 5.082732124,
+      "generation_s": 1.7387282085,
+      "actor_update_s": 3.4566286584999997,
+      "generation_actor_overlap_s": 1.729480194,
+      "overlap_fraction_of_step": 0.3402658554114272,
+      "overlap_fraction_of_actor": 0.5003372837713225,
+      "overlap_fraction_of_generation": 0.9946811615209382,
+      "direct_overlap_confirmed": true
+    },
+    "colocated": {
+      "measured_trace_step_s": 7.930441946,
+      "largest_uncovered_gap_s": 0.606280608,
+      "sleep_replicas_overlap_s": 0.604299655,
+      "sleep_replicas_fraction_of_gap": 0.996732613621711,
+      "transferqueue_overlap_s": 0.004880295,
+      "sleep_transition_localization_confirmed": true
+    }
+  },
+  "interpretation": {
+    "text": "On the frozen 8xRTX4090 configuration, the 6-trainer/2-rollout one-step-off-policy execution directly exhibits substantial generation/actor-update temporal overlap, while the colocated hybrid-engine execution directly exhibits a recurrent uncovered step interval localized almost entirely to sleep_replicas. These execution-structure observations are consistent with the independently measured token-normalized system-throughput advantage of the disaggregated configuration. They are mechanism evidence, not a causal decomposition of the performance gap.",
+    "causal_attribution_allowed": false
+  },
+  "scope": {
+    "formal_matched_configuration_system_comparison": true,
+    "formal_exact_realized_token_workload_match": false,
+    "formal_token_normalized_throughput_comparison": true,
+    "formal_raw_step_time_matched_workload_claim": false,
+    "formal_single_variable_placement_causal_claim": false,
+    "formal_causal_mechanism_claim": false,
+    "formal_statistical_significance_claim": false,
+    "formal_cross_hardware_claim": false,
+    "formal_general_performance_recommendation": false,
+    "formal_convergence_claim": false,
+    "nsight_required": false
+  },
+  "evidence": {
+    "benchmark_decision": "final-benchmark.json",
+    "mechanism_decision": "mechanism-trace.json",
+    "manifest": "evidence-manifest.json",
+    "manifest_sha256": "efa6ee47cc37ecbc770b196f59d4448c2b5007c4830f5b7de557de0c4ed0b49d"
+  },
+  "scientific_rerun": false,
+  "model_execution": false,
+  "project2_complete": true,
+  "verdict": "RLTRAIN_COMPLETE"
+}

@@ -1,0 +1,8 @@
+METHOD compiled
+{"method": "compiled", "median_wall_ms": 4.725194536149502, "peak_allocated_bytes": 757355520}
+METHOD manual_torch
+{"method": "manual_torch", "median_wall_ms": 25.570698082447052, "peak_allocated_bytes": 1226097664}
+METHOD fused
+{"method": "fused", "median_wall_ms": 19.567043520510197, "peak_allocated_bytes": 1128858624}
+METHOD dense
+{"method": "dense", "median_wall_ms": 6.86290580779314, "peak_allocated_bytes": 1224094720}

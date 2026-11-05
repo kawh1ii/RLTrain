@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "project": "RLTrain",
+  "milestone": "mechanism-trace",
+  "timestamp": "2026-08-27T14:22:36.427796+08:00",
+  "run_id": "20260827_141936",
+  "scientific_execution": {
+    "disagg_rerun": true,
+    "colocated_rerun": false,
+    "colocated_trace_source": "raw colocated trace retained in private experiment archive"
+  },
+  "disaggregated": {
+    "step_mean_s": 5.082732124,
+    "generation_union_mean_s": 1.7387282085,
+    "actor_update_union_mean_s": 3.4566286584999997,
+    "generation_actor_overlap_mean_s": 1.729480194,
+    "generation_actor_overlap_fraction_of_step": 0.3402658554114272,
+    "generation_actor_overlap_fraction_of_actor": 0.5003372837713225,
+    "generation_actor_overlap_fraction_of_generation": 0.9946811615209382,
+    "actor_trace_recovered": true,
+    "direct_overlap_adjudicable": true,
+    "direct_overlap_observed": true
+  },
+  "colocated": {
+    "step_mean_s": 7.930441946,
+    "largest_uncovered_gap_s": 0.606280608,
+    "sleep_replicas_overlap_s": 0.604299655,
+    "sleep_replicas_fraction_of_largest_gap": 0.996732613621711,
+    "transferqueue_overlap_s": 0.004880295,
+    "sleep_replicas_localization_confirmed": true
+  },
+  "scope": {
+    "formal_performance_claim": false,
+    "formal_statistical_claim": false,
+    "causal_mechanism_claim": false,
+    "direct_interval_observation": true,
+    "nsight_required_now": false
+  },
+  "verdict": "RLTRAIN_MECHANISM_TRACE_COMPLETE",
+  "next_action": "complete"
+}

@@ -1,0 +1,32 @@
+test_bf16 (test_objective.KernelTests.test_bf16) ... ok
+test_fp32 (test_objective.KernelTests.test_fp32) ... ok
+test_large_vocabulary_partial_tile (test_objective.KernelTests.test_large_vocabulary_partial_tile) ... ok
+test_no_kl (test_objective.KernelTests.test_no_kl) ... ok
+test_all_padding_zero_gradients (test_objective.ObjectiveTests.test_all_padding_zero_gradients) ... ok
+test_backward_loss_scaling (test_objective.ObjectiveTests.test_backward_loss_scaling) ... ok
+test_checkpoint_baseline_matches_reference (test_objective.ObjectiveTests.test_checkpoint_baseline_matches_reference) ... ok
+test_chunk_larger_than_tokens (test_objective.ObjectiveTests.test_chunk_larger_than_tokens) ... ok
+test_custom_forward_and_all_gradients (test_objective.ObjectiveTests.test_custom_forward_and_all_gradients) ... ok
+test_empty_response_and_empty_batch (test_objective.ObjectiveTests.test_empty_response_and_empty_batch) ... ok
+test_finite_difference_gradcheck (test_objective.ObjectiveTests.test_finite_difference_gradcheck) ... ok
+test_first_eos_included (test_objective.ObjectiveTests.test_first_eos_included) ... ok
+test_frozen_head (test_objective.ObjectiveTests.test_frozen_head) ... ok
+test_full_optimizer_batch_weights_survive_microbatch_split (test_objective.ObjectiveTests.test_full_optimizer_batch_weights_survive_microbatch_split) ... ok
+test_group_advantage_sample_std (test_objective.ObjectiveTests.test_group_advantage_sample_std) ... ok
+test_group_order (test_objective.ObjectiveTests.test_group_order) ... ok
+test_invalid_config (test_objective.ObjectiveTests.test_invalid_config) ... ok
+test_lengths_exclude_padding (test_objective.ObjectiveTests.test_lengths_exclude_padding) ... ok
+test_masked_nonfinite_metadata (test_objective.ObjectiveTests.test_masked_nonfinite_metadata) ... ok
+test_metadata_grad_rejected (test_objective.ObjectiveTests.test_metadata_grad_rejected) ... ok
+test_nondivisible_chunk_tail (test_objective.ObjectiveTests.test_nondivisible_chunk_tail) ... ok
+test_nonfinite_reward_rejected (test_objective.ObjectiveTests.test_nonfinite_reward_rejected) ... ok
+test_sequence_and_token_normalization (test_objective.ObjectiveTests.test_sequence_and_token_normalization) ... ok
+test_shape_rejected (test_objective.ObjectiveTests.test_shape_rejected) ... ok
+test_singleton_rejected (test_objective.ObjectiveTests.test_singleton_rejected) ... ok
+test_weight_only_gradient (test_objective.ObjectiveTests.test_weight_only_gradient) ... ok
+test_without_kl (test_objective.ObjectiveTests.test_without_kl) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 3.515s
+
+OK

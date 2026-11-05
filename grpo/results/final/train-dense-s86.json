@@ -1,0 +1,120 @@
+{
+  "utc": "2026-11-05T04:52:28.044838+00:00",
+  "args": {
+    "model": "/root/autodl-tmp/models/Qwen2.5-0.5B-Instruct",
+    "data": "/root/autodl-tmp/rltrain-v2/data/rollouts256",
+    "output": "/root/autodl-tmp/rltrain-v2/results/final/train-dense-s86.json",
+    "method": "dense",
+    "microbatch": 8,
+    "steps": 4,
+    "warmup": 1,
+    "seed": 86,
+    "strategy": "vocab",
+    "vocab_chunk": 32768,
+    "chunk": 64,
+    "save_gradients": null,
+    "save_parameters": null
+  },
+  "source_hashes": {
+    "src/rltrain/__init__.py": "b89216d34b9cead085d9a572e8b31bc7ee9cbc3348ab8c7b1344c80d6a4d5fb0",
+    "src/rltrain/baselines.py": "d75a83a727170e8868ddda39b251f4a1c02b0e015dfe4dcfc3040f6ca9789764",
+    "src/rltrain/batch.py": "3486df70b0ca06d1986edc086d57739b622899ea5f0a9c4ce3a06271b66dbc67",
+    "src/rltrain/fused.py": "c822e51b64dfe56be18471332385272bbf509c1a949d92d9078e393f79b6561d",
+    "src/rltrain/kernels.py": "0a89d679f5bea7faa95b14186ff4460c2c1e39ebd23a8484c7fb13028a3a4c22",
+    "src/rltrain/objective.py": "a2194cf043184f7497f8f495763012544c089d704a48218df0e869d3fc2412b1"
+  },
+  "data_sha256": "7804cb938a6a53336040cb8f48aa2e59bdb195f04f016e0982f8a356afb2ca12",
+  "old_logps_sha256": "ba52f4d37a4153d0106d1e7f488e37296e257ffdafe43375307ddc4cd628fa2e",
+  "reference_logps_sha256": "ba52f4d37a4153d0106d1e7f488e37296e257ffdafe43375307ddc4cd628fa2e",
+  "precision": {
+    "parameters": "float32",
+    "autocast": "bfloat16",
+    "head": "bfloat16",
+    "matmul": "high",
+    "compiled_backward_autocast": "off"
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "lr": 1e-06,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "foreach": false,
+    "fused": true
+  },
+  "backbone_gradient_checkpointing": false,
+  "dropout_mode": "eval_with_gradients",
+  "batch_size": 16,
+  "response_width": 256,
+  "active_response_tokens": 3830,
+  "nonzero_advantages": 16,
+  "steps": [
+    {
+      "step": 0,
+      "phase": "warmup",
+      "loss": 5.771149881184101e-05,
+      "wall_ms": 708.0737790092826,
+      "cuda_event_ms": 707.262451171875,
+      "allocated_before_bytes": 1977042944,
+      "peak_allocated_bytes": 13773386752,
+      "peak_reserved_bytes": 14350811136,
+      "actor_version_before": 0,
+      "actor_version_after": 1,
+      "old_policy_version": 0,
+      "reference_policy_version": 0,
+      "timing_usable": true
+    },
+    {
+      "step": 1,
+      "phase": "measured",
+      "loss": -0.0015612752176821232,
+      "wall_ms": 264.2571032047272,
+      "cuda_event_ms": 263.93768310546875,
+      "allocated_before_bytes": 5970618880,
+      "peak_allocated_bytes": 17676787200,
+      "peak_reserved_bytes": 19337838592,
+      "actor_version_before": 1,
+      "actor_version_after": 2,
+      "old_policy_version": 0,
+      "reference_policy_version": 0,
+      "timing_usable": true
+    },
+    {
+      "step": 2,
+      "phase": "measured",
+      "loss": -0.004225549288094044,
+      "wall_ms": 268.52285396307707,
+      "cuda_event_ms": 268.1976623535156,
+      "allocated_before_bytes": 5970618880,
+      "peak_allocated_bytes": 17676787200,
+      "peak_reserved_bytes": 19337838592,
+      "actor_version_before": 2,
+      "actor_version_after": 3,
+      "old_policy_version": 0,
+      "reference_policy_version": 0,
+      "timing_usable": true
+    },
+    {
+      "step": 3,
+      "phase": "measured",
+      "loss": -0.005685020238161087,
+      "wall_ms": 262.28466257452965,
+      "cuda_event_ms": 261.9590759277344,
+      "allocated_before_bytes": 5970618880,
+      "peak_allocated_bytes": 17676787200,
+      "peak_reserved_bytes": 19337838592,
+      "actor_version_before": 3,
+      "actor_version_after": 4,
+      "old_policy_version": 0,
+      "reference_policy_version": 0,
+      "timing_usable": true
+    }
+  ],
+  "median_wall_ms": 264.2571032047272,
+  "peak_allocated_bytes": 17676787200,
+  "frozen_logprobs_unchanged": true,
+  "completed": true
+}

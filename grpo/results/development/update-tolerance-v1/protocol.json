@@ -1,0 +1,55 @@
+{
+  "model": "/root/autodl-tmp/models/Qwen2.5-0.5B-Instruct",
+  "data": "/root/autodl-tmp/rltrain-v2/data/rollouts256",
+  "data_sha256": "7804cb938a6a53336040cb8f48aa2e59bdb195f04f016e0982f8a356afb2ca12",
+  "micro_seeds": [
+    82,
+    83,
+    84
+  ],
+  "model_repeats": [
+    86,
+    87,
+    88
+  ],
+  "fixed_strategy": "vocab",
+  "fixed_vocab_chunk": 32768,
+  "primary_micro_shapes": [
+    [
+      4,
+      128,
+      896,
+      151936
+    ],
+    [
+      8,
+      256,
+      896,
+      151936
+    ],
+    [
+      8,
+      512,
+      896,
+      151936
+    ]
+  ],
+  "micro_methods": [
+    "dense",
+    "compiled",
+    "checkpoint",
+    "manual_torch",
+    "fused",
+    "liger"
+  ],
+  "model_methods": [
+    "dense",
+    "compiled",
+    "fused",
+    "liger"
+  ],
+  "model_microbatch": 8,
+  "model_steps": 4,
+  "warmup_steps": 1,
+  "note": "fixed trajectory batch and pretrained initialization; repeated model runs are timing replicates, not new datasets"
+}

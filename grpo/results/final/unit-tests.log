@@ -1,0 +1,50 @@
+test_causal_shift_predicts_first_response_from_last_prompt (test_batch.BatchTests.test_causal_shift_predicts_first_response_from_last_prompt) ... ok
+test_empty_response_rejected (test_batch.BatchTests.test_empty_response_rejected) ... ok
+test_frozen_epoch_validity_not_reference_current_equality (test_batch.BatchTests.test_frozen_epoch_validity_not_reference_current_equality) ... ok
+test_full_batch_sequence_mean_preserved (test_batch.BatchTests.test_full_batch_sequence_mean_preserved) ... ok
+test_future_and_over_stale_rejected (test_batch.BatchTests.test_future_and_over_stale_rejected) ... ok
+test_matching_old_rollout_version (test_batch.BatchTests.test_matching_old_rollout_version) ... ok
+test_padded_out_of_range_positions_clamped_and_zero_weighted (test_batch.BatchTests.test_padded_out_of_range_positions_clamped_and_zero_weighted) ... ok
+test_bf16 (test_objective.KernelTests.test_bf16) ... ok
+test_fp32 (test_objective.KernelTests.test_fp32) ... ok
+test_frozen_large_head (test_objective.KernelTests.test_frozen_large_head) ... ok
+test_large_vocabulary_partial_tile (test_objective.KernelTests.test_large_vocabulary_partial_tile) ... ok
+test_no_kl (test_objective.KernelTests.test_no_kl) ... ok
+test_sequence_control (test_objective.KernelTests.test_sequence_control) ... ok
+test_accumulated_loss_and_gradients_use_global_normalizer (test_objective.ObjectiveTests.test_accumulated_loss_and_gradients_use_global_normalizer) ... ok
+test_all_padding_zero_gradients (test_objective.ObjectiveTests.test_all_padding_zero_gradients) ... ok
+test_backward_loss_scaling (test_objective.ObjectiveTests.test_backward_loss_scaling) ... ok
+test_both_signs_of_clipped_policy_gradient (test_objective.ObjectiveTests.test_both_signs_of_clipped_policy_gradient) ... ok
+test_checkpoint_baseline_matches_reference (test_objective.ObjectiveTests.test_checkpoint_baseline_matches_reference) ... ok
+test_chunk_larger_than_tokens (test_objective.ObjectiveTests.test_chunk_larger_than_tokens) ... ok
+test_custom_forward_and_all_gradients (test_objective.ObjectiveTests.test_custom_forward_and_all_gradients) ... ok
+test_empty_response_and_empty_batch (test_objective.ObjectiveTests.test_empty_response_and_empty_batch) ... ok
+test_finite_difference_gradcheck (test_objective.ObjectiveTests.test_finite_difference_gradcheck) ... ok
+test_first_eos_included (test_objective.ObjectiveTests.test_first_eos_included) ... ok
+test_fp64_three_adam_updates_match_reference (test_objective.ObjectiveTests.test_fp64_three_adam_updates_match_reference) ... /root/autodl-tmp/rltrain-v2/tests/test_objective.py:125: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  self.assertGreater(float((a-initial).norm()),0.)
+ok
+test_frozen_head (test_objective.ObjectiveTests.test_frozen_head) ... ok
+test_full_optimizer_batch_weights_survive_microbatch_split (test_objective.ObjectiveTests.test_full_optimizer_batch_weights_survive_microbatch_split) ... ok
+test_group_advantage_sample_std (test_objective.ObjectiveTests.test_group_advantage_sample_std) ... ok
+test_group_order (test_objective.ObjectiveTests.test_group_order) ... ok
+test_invalid_config (test_objective.ObjectiveTests.test_invalid_config) ... ok
+test_invalid_target_rejected_before_kernel (test_objective.ObjectiveTests.test_invalid_target_rejected_before_kernel) ... ok
+test_lengths_exclude_padding (test_objective.ObjectiveTests.test_lengths_exclude_padding) ... ok
+test_masked_nonfinite_metadata (test_objective.ObjectiveTests.test_masked_nonfinite_metadata) ... ok
+test_metadata_grad_rejected (test_objective.ObjectiveTests.test_metadata_grad_rejected) ... ok
+test_negative_weight_rejected (test_objective.ObjectiveTests.test_negative_weight_rejected) ... ok
+test_nondivisible_chunk_tail (test_objective.ObjectiveTests.test_nondivisible_chunk_tail) ... ok
+test_nondivisible_vocab_tail (test_objective.ObjectiveTests.test_nondivisible_vocab_tail) ... ok
+test_nonfinite_reward_rejected (test_objective.ObjectiveTests.test_nonfinite_reward_rejected) ... ok
+test_sequence_and_token_normalization (test_objective.ObjectiveTests.test_sequence_and_token_normalization) ... ok
+test_shape_rejected (test_objective.ObjectiveTests.test_shape_rejected) ... ok
+test_singleton_rejected (test_objective.ObjectiveTests.test_singleton_rejected) ... ok
+test_weight_only_gradient (test_objective.ObjectiveTests.test_weight_only_gradient) ... ok
+test_without_kl (test_objective.ObjectiveTests.test_without_kl) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 2.464s
+
+OK

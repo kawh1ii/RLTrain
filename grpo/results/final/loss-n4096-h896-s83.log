@@ -1,0 +1,12 @@
+METHOD liger
+{"method": "liger", "median_wall_ms": 460.89418046176434, "peak_allocated_bytes": 1396815360}
+METHOD dense
+{"method": "dense", "median_wall_ms": 55.844622664153576, "peak_allocated_bytes": 7765066752}
+METHOD compiled
+{"method": "compiled", "median_wall_ms": 37.639337591826916, "peak_allocated_bytes": 4032201728}
+METHOD checkpoint
+{"method": "checkpoint", "median_wall_ms": 200.87173860520124, "peak_allocated_bytes": 1122452480}
+METHOD manual_torch
+{"method": "manual_torch", "median_wall_ms": 78.20851821452379, "peak_allocated_bytes": 2194740224}
+METHOD fused
+{"method": "fused", "median_wall_ms": 32.422455959022045, "peak_allocated_bytes": 1121321984}

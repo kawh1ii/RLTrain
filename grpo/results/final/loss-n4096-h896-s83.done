@@ -1,0 +1,37 @@
+{
+  "command": [
+    "/root/autodl-tmp/turbollm-v2/.venv/bin/python",
+    "/root/autodl-tmp/rltrain-v2/tools/benchmark_loss.py",
+    "--output",
+    "/root/autodl-tmp/rltrain-v2/results/final/loss-n4096-h896-s83.json",
+    "--batch",
+    "8",
+    "--response",
+    "512",
+    "--hidden",
+    "896",
+    "--vocab",
+    "151936",
+    "--seed",
+    "83"
+  ],
+  "source_fingerprint": {
+    "src/rltrain/__init__.py": "b89216d34b9cead085d9a572e8b31bc7ee9cbc3348ab8c7b1344c80d6a4d5fb0",
+    "src/rltrain/baselines.py": "d75a83a727170e8868ddda39b251f4a1c02b0e015dfe4dcfc3040f6ca9789764",
+    "src/rltrain/batch.py": "3486df70b0ca06d1986edc086d57739b622899ea5f0a9c4ce3a06271b66dbc67",
+    "src/rltrain/fused.py": "c822e51b64dfe56be18471332385272bbf509c1a949d92d9078e393f79b6561d",
+    "src/rltrain/kernels.py": "0a89d679f5bea7faa95b14186ff4460c2c1e39ebd23a8484c7fb13028a3a4c22",
+    "src/rltrain/objective.py": "a2194cf043184f7497f8f495763012544c089d704a48218df0e869d3fc2412b1",
+    "tools/benchmark_loss.py": "6e4515d01f015f62934df6317c0655d2c01fb9e6fe715c15d51579b3736be444",
+    "tools/compare_training.py": "69a169afd37dc2c07bf2ad371c2aadf7333c80ba7cfc953fcf58c17acb2b1a27",
+    "tools/full_validation.py": "227f71ae2ad56406bf1a11ff9df97c18ed9ecbc859a225b7b1fcd38d70b2bf0e",
+    "tools/make_rollouts.py": "0684980bb8f43415a2cfddb6a34792b719f7c1c70569be02a49dd750e3768f06",
+    "tools/prepare_data.py": "4cf08247932548dd11baff114cd59fa7a5cb7c2e1c4b7fef9653fc98813d98c4",
+    "tools/report.py": "1a22cac7f6208e17c44f620f2c7fe3f5c6f82b1d91cb9f5c61a47f45d01ff897",
+    "tools/train_step.py": "4edd5d71f5cd8f454bd08169510f444de20b9b155d01de46482c51d603c50c91",
+    "tests/test_batch.py": "d9b23e4d623f0d66f5cbe73064cf5ac280f5c926e3296d923f888af19b9b4bf6",
+    "tests/test_objective.py": "23716b344f7cad40dd6cf6e1b844477f3d65f3e6568eaec2e540ae4b3338eb4d",
+    "baselines/liger-manifest.json": "62684d108baf2190de5947e2877c43bc66f453b589cc308ec2247ef0afb95ba2",
+    "pyproject.toml": "08c42956633f99b5d32eede97bb2753f48c6e34bb268d89cd32339308ff021d6"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "project": "RLTrain",
+  "milestone": "benchmark",
+  "timestamp": "2026-08-27T13:45:43.933812+08:00",
+  "source_run_id": "20260827_132007",
+  "source_decision": "internal-frozen-benchmark-source",
+  "checks": {
+    "all_six_runs_pass": true,
+    "matched_configuration": true,
+    "exact_realized_token_match": false,
+    "directional_step_time_robustness": true
+  },
+  "realized_workload": {
+    "disagg_total_tokens_replicates": [
+      11465.0,
+      10979.0,
+      12191.0
+    ],
+    "colocated_total_tokens_replicates": [
+      9295.0,
+      8601.0,
+      8528.0
+    ],
+    "disagg_total_tokens_mean": 11545.0,
+    "colocated_total_tokens_mean": 8808.0,
+    "disagg_over_colocated_token_difference_fraction": 0.3107402361489555
+  },
+  "descriptive_step_time": {
+    "disagg_replicate_means_s": [
+      5.053001891076565,
+      5.1174805730581285,
+      5.060302247852087
+    ],
+    "colocated_replicate_means_s": [
+      7.995051457360387,
+      8.105834428593516,
+      7.991289932653308
+    ],
+    "disagg_median_s": 5.060302247852087,
+    "colocated_median_s": 7.995051457360387,
+    "disagg_step_time_reduction_fraction": 0.3670707093206407,
+    "classification": "DESCRIPTIVE_SECONDARY_METRIC_NOT_EXACT_REALIZED_WORKLOAD_MATCHED"
+  },
+  "primary_normalized_metric": {
+    "metric": "SYSTEM_TOKENS_PER_SECOND",
+    "formula": "SUM_TOTAL_TOKENS_DIV_SUM_STEP_TIME",
+    "disagg_replicates": [
+      453.7896579950549,
+      429.0783264640365,
+      481.82892653001636
+    ],
+    "colocated_replicates": [
+      232.5188286672716,
+      212.2175101346698,
+      213.43237629643832
+    ],
+    "disagg_median_tokens_per_s": 453.7896579950549,
+    "colocated_median_tokens_per_s": 213.43237629643832,
+    "disagg_advantage_fraction": 1.126151926288737,
+    "winner": "DISAGG_6PLUS2"
+  },
+  "scope": {
+    "formal_matched_configuration_system_comparison": true,
+    "formal_exact_realized_workload_match": false,
+    "formal_raw_step_time_matched_workload_claim": false,
+    "formal_token_normalized_system_throughput_comparison": true,
+    "formal_single_variable_placement_causal_claim": false,
+    "formal_general_performance_recommendation": false,
+    "formal_cross_hardware_claim": false,
+    "formal_statistical_significance_claim": false,
+    "formal_convergence_claim": false
+  },
+  "scientific_rerun": false,
+  "verdict": "RLTRAIN_BENCHMARK_COMPLETE",
+  "next_milestone": "complete"
+}

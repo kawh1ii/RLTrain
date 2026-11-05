@@ -1,0 +1,352 @@
+{
+  "utc": "2026-11-05T04:48:02.128041+00:00",
+  "args": {
+    "output": "/root/autodl-tmp/rltrain-v2/results/final/loss-n512-h896-s82.json",
+    "batch": 4,
+    "response": 128,
+    "hidden": 896,
+    "vocab": 151936,
+    "chunk": 64,
+    "strategy": "vocab",
+    "vocab_chunk": 32768,
+    "seed": 82,
+    "warmup": 2,
+    "repetitions": 7,
+    "methods": "dense,compiled,checkpoint,manual_torch,fused,liger",
+    "frozen_head": false
+  },
+  "environment": {
+    "torch": "2.13.0+cu130",
+    "triton": "3.7.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "float32_matmul_precision": "high"
+  },
+  "source_hashes": {
+    "src/rltrain/__init__.py": "b89216d34b9cead085d9a572e8b31bc7ee9cbc3348ab8c7b1344c80d6a4d5fb0",
+    "src/rltrain/baselines.py": "d75a83a727170e8868ddda39b251f4a1c02b0e015dfe4dcfc3040f6ca9789764",
+    "src/rltrain/batch.py": "3486df70b0ca06d1986edc086d57739b622899ea5f0a9c4ce3a06271b66dbc67",
+    "src/rltrain/fused.py": "c822e51b64dfe56be18471332385272bbf509c1a949d92d9078e393f79b6561d",
+    "src/rltrain/kernels.py": "0a89d679f5bea7faa95b14186ff4460c2c1e39ebd23a8484c7fb13028a3a4c22",
+    "src/rltrain/objective.py": "a2194cf043184f7497f8f495763012544c089d704a48218df0e869d3fc2412b1"
+  },
+  "input_hashes": {
+    "hidden": "c7d9293a4986490c65ff51b5ac7ed41cb1f914e60ee4753c37df990a68e7b207",
+    "weight": "f32f63834a1a7057d307899632947e6dcc08e8967c444edf6561d37b12c9037f",
+    "targets": "6b6348c0615145f213c2cf0958d9b31a4a922cf781b5192fdf423048257eda9f",
+    "old": "2283cf3c989003fc3a215f9b8fb54b6ff870bed0ff71448be37b072f38ddbdbe",
+    "reference": "3b0bb8e224d2aee86902b6f2a67befd87acf6d6ad83b11422cebca8c3423fe81",
+    "advantages": "f4fe818d8f81b5cd28233420580ced5d03fb38b78c929084bc67603e72718f90",
+    "weights": "4213fcab47c9d0f7c71593bb6877b32635182eab6244e0f55c4252adfaaae668"
+  },
+  "methods": {
+    "fused": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 2.2351741790771484e-08,
+        "loss": 0.07551713287830353,
+        "reference_loss": 0.07551711052656174,
+        "hidden": {
+          "relative_l2": 0.0028758977017153712,
+          "cosine": 0.9999958663931855,
+          "max_absolute": 1.9073486328125e-06
+        },
+        "weight": {
+          "relative_l2": 1.3422137186106399e-06,
+          "cosine": 0.9999999999990997,
+          "max_absolute": 2.384185791015625e-07
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        7.081753574311733,
+        4.30976040661335,
+        4.279182292521,
+        4.25968412309885,
+        4.2656464502215385,
+        4.237045533955097,
+        4.313710145652294
+      ],
+      "cuda_event_ms": [
+        7.015423774719238,
+        4.280320167541504,
+        4.255712032318115,
+        4.231167793273926,
+        4.241407871246338,
+        4.21068811416626,
+        4.286464214324951
+      ],
+      "median_wall_ms": 4.279182292521,
+      "allocated_before_bytes": 290598912,
+      "peak_allocated_bytes": 632177664,
+      "peak_reserved_bytes": 819986432,
+      "all_peak_allocated_bytes": [
+        632177664,
+        632177664,
+        632177664,
+        632177664,
+        632177664,
+        632177664,
+        632177664
+      ]
+    },
+    "liger": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 2.2351741790771484e-08,
+        "loss": 0.07551708817481995,
+        "reference_loss": 0.07551711052656174,
+        "hidden": {
+          "relative_l2": 0.0039423251985186755,
+          "cosine": 0.9999923443138667,
+          "max_absolute": 1.9073486328125e-06
+        },
+        "weight": {
+          "relative_l2": 0.003465435119714833,
+          "cosine": 0.9999941652416516,
+          "max_absolute": 1.52587890625e-05
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        185.24081353098154,
+        232.64671955257654,
+        246.91774137318134,
+        234.82310213148594,
+        229.61657401174307,
+        236.7044910788536,
+        238.58869541436434
+      ],
+      "cuda_event_ms": [
+        185.1301727294922,
+        232.5070343017578,
+        246.8031005859375,
+        234.7049560546875,
+        229.49618530273438,
+        236.59344482421875,
+        238.4720001220703
+      ],
+      "median_wall_ms": 234.82310213148594,
+      "allocated_before_bytes": 290599424,
+      "peak_allocated_bytes": 1382499840,
+      "peak_reserved_bytes": 1639972864,
+      "all_peak_allocated_bytes": [
+        1382499840,
+        1382499840,
+        1382499840,
+        1382499840,
+        1382499840,
+        1382499840,
+        1382499840
+      ]
+    },
+    "dense": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 0.0,
+        "loss": 0.07551711052656174,
+        "reference_loss": 0.07551711052656174,
+        "hidden": {
+          "relative_l2": 0.0,
+          "cosine": 1.0,
+          "max_absolute": 0.0
+        },
+        "weight": {
+          "relative_l2": 0.0,
+          "cosine": 1.0,
+          "max_absolute": 0.0
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        11.00506167858839,
+        7.16101098805666,
+        7.115047425031662,
+        6.934933364391327,
+        6.924726068973541,
+        6.915704347193241,
+        6.9393254816532135
+      ],
+      "cuda_event_ms": [
+        10.958847999572754,
+        7.136256217956543,
+        7.090176105499268,
+        6.908927917480469,
+        6.898687839508057,
+        6.891520023345947,
+        6.9170241355896
+      ],
+      "median_wall_ms": 6.9393254816532135,
+      "allocated_before_bytes": 290598912,
+      "peak_allocated_bytes": 1224094720,
+      "peak_reserved_bytes": 1484783616,
+      "all_peak_allocated_bytes": [
+        1224094720,
+        1224094720,
+        1224094720,
+        1224094720,
+        1224094720,
+        1224094720,
+        1224094720
+      ]
+    },
+    "compiled": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 2.2351741790771484e-08,
+        "loss": 0.07551708817481995,
+        "reference_loss": 0.07551711052656174,
+        "hidden": {
+          "relative_l2": 6.377037113768745e-06,
+          "cosine": 0.9999999999796665,
+          "max_absolute": 1.1920928955078125e-07
+        },
+        "weight": {
+          "relative_l2": 1.9737551441726245e-07,
+          "cosine": 0.9999999999999806,
+          "max_absolute": 9.313225746154785e-10
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        8.16256646066904,
+        4.583129659295082,
+        4.543478600680828,
+        4.43944800645113,
+        4.426625557243824,
+        4.427525214850903,
+        4.417430609464645
+      ],
+      "cuda_event_ms": [
+        8.117247581481934,
+        4.55782413482666,
+        4.518911838531494,
+        4.418560028076172,
+        4.4021759033203125,
+        4.405248165130615,
+        4.393983840942383
+      ],
+      "median_wall_ms": 4.43944800645113,
+      "allocated_before_bytes": 290598912,
+      "peak_allocated_bytes": 757355520,
+      "peak_reserved_bytes": 859832320,
+      "all_peak_allocated_bytes": [
+        757355520,
+        757355520,
+        757355520,
+        757355520,
+        757355520,
+        757355520,
+        757355520
+      ]
+    },
+    "checkpoint": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 2.2351741790771484e-08,
+        "loss": 0.07551713287830353,
+        "reference_loss": 0.07551711052656174,
+        "hidden": {
+          "relative_l2": 0.00324492467421755,
+          "cosine": 0.9999947385690604,
+          "max_absolute": 1.9073486328125e-06
+        },
+        "weight": {
+          "relative_l2": 0.0006979306353733276,
+          "cosine": 0.9999997564475334,
+          "max_absolute": 7.62939453125e-06
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        40.07627721875906,
+        31.283664517104626,
+        35.793980583548546,
+        45.80156318843365,
+        42.8386302664876,
+        43.24967786669731,
+        45.372615568339825
+      ],
+      "cuda_event_ms": [
+        40.028160095214844,
+        31.243263244628906,
+        35.71916961669922,
+        45.71750259399414,
+        42.774654388427734,
+        43.18310546875,
+        45.30271911621094
+      ],
+      "median_wall_ms": 42.8386302664876,
+      "allocated_before_bytes": 290598912,
+      "peak_allocated_bytes": 1109521408,
+      "peak_reserved_bytes": 1367343104,
+      "all_peak_allocated_bytes": [
+        1109521408,
+        1109521408,
+        1109521408,
+        1109521408,
+        1109521408,
+        1109521408,
+        1109521408
+      ]
+    },
+    "manual_torch": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 7.450580596923828e-09,
+        "loss": 0.07551711797714233,
+        "reference_loss": 0.07551711052656174,
+        "hidden": {
+          "relative_l2": 0.0028758940421924205,
+          "cosine": 0.9999958664037191,
+          "max_absolute": 1.9073486328125e-06
+        },
+        "weight": {
+          "relative_l2": 2.0543011344801504e-07,
+          "cosine": 0.9999999999999784,
+          "max_absolute": 9.313225746154785e-10
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        12.492450885474682,
+        9.51707735657692,
+        10.243501514196396,
+        9.24738496541977,
+        9.2356251552701,
+        9.235247038304806,
+        9.247057139873505
+      ],
+      "cuda_event_ms": [
+        12.44057559967041,
+        9.482239723205566,
+        10.215423583984375,
+        9.226240158081055,
+        9.21497631072998,
+        9.21395206451416,
+        9.223135948181152
+      ],
+      "median_wall_ms": 9.24738496541977,
+      "allocated_before_bytes": 290598912,
+      "peak_allocated_bytes": 766400000,
+      "peak_reserved_bytes": 887095296,
+      "all_peak_allocated_bytes": [
+        766400000,
+        766400000,
+        766400000,
+        766400000,
+        766400000,
+        766400000,
+        766400000
+      ]
+    }
+  },
+  "external_baseline": {
+    "repository": "https://github.com/linkedin/Liger-Kernel",
+    "commit": "8c7a5078318da1295dc3ca445f9d85e9e9e153f5",
+    "verified_source_files": 285,
+    "manifest_sha256": "62684d108baf2190de5947e2877c43bc66f453b589cc308ec2247ef0afb95ba2",
+    "loaded_module": "/root/autodl-tmp/liger-baseline/src/liger_kernel/chunked_loss/grpo_loss.py"
+  },
+  "completed": true,
+  "inputs_unchanged": true
+}

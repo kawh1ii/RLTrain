@@ -1,0 +1,10 @@
+STAGE unit-tests
+STAGE model-accuracy
+Traceback (most recent call last):
+  File "/root/autodl-tmp/rltrain-v2/tools/full_validation.py", line 59, in <module>
+    stage('model-accuracy',[str(ROOT/'tools/compare_training.py'),'--model',a.model,'--data',str(data),
+  File "/root/autodl-tmp/rltrain-v2/tools/full_validation.py", line 50, in stage
+    subprocess.run(command,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+  File "/root/miniconda3/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/root/autodl-tmp/turbollm-v2/.venv/bin/python', '/root/autodl-tmp/rltrain-v2/tools/compare_training.py', '--model', '/root/autodl-tmp/models/Qwen2.5-0.5B-Instruct', '--data', '/root/autodl-tmp/rltrain-v2/data/rollouts256', '--output', '/root/autodl-tmp/rltrain-v2/results/final/accuracy', '--steps', '3']' returned non-zero exit status 1.
