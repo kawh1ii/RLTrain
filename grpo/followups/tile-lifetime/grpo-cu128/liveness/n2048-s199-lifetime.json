@@ -1,0 +1,107 @@
+{
+  "utc": "2026-11-05T10:27:10.824726+00:00",
+  "args": {
+    "output": "/root/autodl-tmp/project-depth/grpo-cu128/liveness/n2048-s199-lifetime.json",
+    "batch": 4,
+    "response": 512,
+    "hidden": 896,
+    "vocab": 151936,
+    "chunk": 64,
+    "strategy": "vocab",
+    "vocab_chunk": 32768,
+    "seed": 199,
+    "warmup": 3,
+    "repetitions": 11,
+    "methods": "fused",
+    "frozen_head": false
+  },
+  "environment": {
+    "torch": "2.8.0+cu128",
+    "triton": "3.4.0",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "float32_matmul_precision": "high"
+  },
+  "source_hashes": {
+    "src/rltrain/__init__.py": "b89216d34b9cead085d9a572e8b31bc7ee9cbc3348ab8c7b1344c80d6a4d5fb0",
+    "src/rltrain/baselines.py": "0c7de27ce36aa8b22a808b192f0a6d5ada1df01361d9694c8c4ca42201edf251",
+    "src/rltrain/batch.py": "3486df70b0ca06d1986edc086d57739b622899ea5f0a9c4ce3a06271b66dbc67",
+    "src/rltrain/fused.py": "4a9ae50e806a3871b7c699904c7f1d27449bf98648f52f7345229ff34e295136",
+    "src/rltrain/kernels.py": "0a89d679f5bea7faa95b14186ff4460c2c1e39ebd23a8484c7fb13028a3a4c22",
+    "src/rltrain/objective.py": "a2194cf043184f7497f8f495763012544c089d704a48218df0e869d3fc2412b1"
+  },
+  "input_hashes": {
+    "hidden": "7420f9b32822f944a04ecba7a07ed3ab624e0550d24d1cb22f416a1659b269cd",
+    "weight": "039b833b84de6403154152be955d9597ec5d04e872766ff1fcdb45efa849d1c2",
+    "targets": "156f9ddc1b2e45de361e58c862b45a23a8f5ba5dc5616ae382a04b2dc9c63cd4",
+    "old": "a3c59100b9427815a70b6e2cb702e08d7e5beffdd51a455d7775d6cb74adba6d",
+    "reference": "4f0a2ed5880bbfa318d0b4cbbb4b1cb31b55368690705aa90a991173f52b0aaf",
+    "advantages": "3e75d1e11cc4b9088092f1f9cb6b4fb886161d5651201a355eed15329463db1a",
+    "weights": "6f49bb5ddf9b540ffdfc4d8327cdb68ef70908e9b68da81bb8390f1bde4a5fae"
+  },
+  "methods": {
+    "fused": {
+      "status": "passed",
+      "accuracy": {
+        "loss_absolute": 1.4901161193847656e-08,
+        "loss": 0.07458998262882233,
+        "reference_loss": 0.07458996772766113,
+        "hidden": {
+          "relative_l2": 0.0023211401379138333,
+          "cosine": 0.9999973075247018,
+          "max_absolute": 4.76837158203125e-07
+        },
+        "weight": {
+          "relative_l2": 9.13500906274604e-05,
+          "cosine": 0.9999999958288127,
+          "max_absolute": 1.9073486328125e-06
+        },
+        "passed": true
+      },
+      "wall_ms": [
+        18.900059163570404,
+        17.00334995985031,
+        17.026573419570923,
+        17.011739313602448,
+        16.8130025267601,
+        16.738474369049072,
+        16.737110912799835,
+        16.770951449871063,
+        16.80842787027359,
+        16.750991344451904,
+        16.76153391599655
+      ],
+      "cuda_event_ms": [
+        18.83443260192871,
+        16.976896286010742,
+        17.00147247314453,
+        16.991199493408203,
+        16.79257583618164,
+        16.71887969970703,
+        16.717599868774414,
+        16.746496200561523,
+        16.78438377380371,
+        16.730112075805664,
+        16.741376876831055
+      ],
+      "median_wall_ms": 16.80842787027359,
+      "allocated_before_bytes": 293388288,
+      "peak_allocated_bytes": 707593216,
+      "peak_reserved_bytes": 838860800,
+      "all_peak_allocated_bytes": [
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216,
+        707593216
+      ]
+    }
+  },
+  "completed": true,
+  "inputs_unchanged": true
+}

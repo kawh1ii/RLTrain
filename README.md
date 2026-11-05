@@ -8,3 +8,5 @@
 - [源码](grpo/src) · [测试](grpo/tests) · [原始实验记录](grpo/results)
 
 当前实现及其测量证据在 `grpo/`。旧实现与实验仍可从[此前的项目说明](README.previous.md)查看。
+
+- [TiledGRPO 缓冲生命周期与在线策略更新实验](grpo/followups/tile-lifetime/README.md)

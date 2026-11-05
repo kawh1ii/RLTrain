@@ -1,0 +1,6 @@
+METHOD compiled
+{"method": "compiled", "median_wall_ms": 37.53332048654556, "peak_allocated_bytes": 4032201728}
+METHOD fused
+{"method": "fused", "median_wall_ms": 33.94853323698044, "peak_allocated_bytes": 651559936}
+METHOD dense
+{"method": "dense", "median_wall_ms": 57.5084462761879, "peak_allocated_bytes": 7765066752}

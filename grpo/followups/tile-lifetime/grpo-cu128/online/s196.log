@@ -1,0 +1,11 @@
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   1%|          | 2/290 [00:00<00:14, 19.98it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1996.59it/s]
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<00:38,  7.53it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1831.97it/s]
+{"round": 0, "rollout_version": 0, "generation_s": 0.5060835406184196, "correct_responses": 0, "mixed_reward_groups": 0, "active_response_tokens": 496, "actor_version_after": 0}
+{"round": 1, "rollout_version": 0, "generation_s": 0.4882288873195648, "correct_responses": 0, "mixed_reward_groups": 0, "active_response_tokens": 465, "actor_version_after": 0}
+{"round": 2, "rollout_version": 0, "generation_s": 0.47728758305311203, "correct_responses": 0, "mixed_reward_groups": 0, "active_response_tokens": 461, "actor_version_after": 0}
+Traceback (most recent call last):
+  File "/root/autodl-tmp/project-depth/online_grpo.py", line 209, in <module>
+    main()
+  File "/root/autodl-tmp/project-depth/online_grpo.py", line 205, in main
+    raise RuntimeError("Fewer than two informative policy updates")
+RuntimeError: Fewer than two informative policy updates

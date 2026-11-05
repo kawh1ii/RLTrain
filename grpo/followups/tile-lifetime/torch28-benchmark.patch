@@ -1,0 +1,12 @@
+--- a/src/rltrain/baselines.py
++++ b/src/rltrain/baselines.py
+@@ -13,7 +13,8 @@
+ 
+ # Training uses AMP for forward and runs backward outside AMP. Match the
+ # documented AOTAutograd contract rather than its same_as_forward default.
+-aot_config.backward_pass_autocast="off"
++if hasattr(aot_config, "backward_pass_autocast"):
++    aot_config.backward_pass_autocast = "off"
+ 
+ 
+ @functools.lru_cache(maxsize=1)

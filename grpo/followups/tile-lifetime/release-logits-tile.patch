@@ -1,0 +1,21 @@
+--- a/src/rltrain/fused.py
++++ b/src/rltrain/fused.py
+@@ -46,6 +46,8 @@
+         if backend=="triton":
+             from rltrain.kernels import update_vocab_stats
+             update_vocab_stats(logits,targets,maximum,total,selected,start)
++            # Release before the next GEMM allocates its output tile.
++            del logits
+         else:
+             x=logits.to(dtype)
+             local=x.amax(-1)
+@@ -88,6 +90,9 @@
+                 torch.addmm(gh,grad,weight[sl],out_dtype=torch.float32,out=gh)
+             else:
+                 gh.addmm_(grad.to(dtype),weight[sl].to(dtype))
++        if backend == "triton":
++            # grad aliases logits. Drop both references before the next GEMM.
++            del grad, logits
+     return gh.to(hidden.dtype) if gh is not None else None,gw
+ 
+ 
